@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" Id="LFXkRTqq96fPBUp9PlZB7s" LanguageVersion="2021.3.3.131" Version="0.128">
+  <NugetDependency Id="GJArG8K7Y8TPs3wvKouEMT" Location="VL.CoreLib" Version="2021.3.3" />
+  <Patch Id="PiMPQ9cL0l2Lw2QBSYzSyD">
+    <Canvas Id="Po8BkQk4LdQO9KXHqyEep9" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="RnoqPmgL2wgLRyeP6XFr9d">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <FullNameCategoryReference ID="Primitive" />
+      </p:NodeReference>
+      <Patch Id="UIUi8q8GT8eLN1yNlw3TxB">
+        <Canvas Id="M507eYy2198O9HXdQ4acz8" CanvasType="Group">
+          <Node Bounds="913,317,45,19" Id="S744rvXamVVMJpDUHz9bs4">
+            <p:NodeReference LastCategoryFullName="VL.Dollar" LastSymbolSource="VL.Dollar.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="$ (Spread)" />
+            </p:NodeReference>
+            <Pin Id="JqjbeIBwOnSNlSIvxlN4nQ" Name="Template" Kind="InputPin" />
+            <Pin Id="O3aMVIjZfAfNfY7GrUh6NJ" Name="Values" Kind="InputPin" />
+            <Pin Id="HvlXii2SRSZMWZ0BVUnM1R" Name="Mask" Kind="InputPin" />
+            <Pin Id="S5CB1pIsTZwP9L289gR6dt" Name="Output" Kind="OutputPin" />
+            <Pin Id="CThFp065R1UMuiOhTrFZYU" Name="Slot Count" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="270,316,587,19" Id="CIefq4b0ij9LkckSKn8iwY">
+            <p:NodeReference LastCategoryFullName="VL.Dollar" LastSymbolSource="VL.Dollar.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="$" />
+            </p:NodeReference>
+            <Pin Id="SIBOsWavgSGLeoRkPtVGp6" Name="Template" Kind="InputPin" DefaultValue="x{}x{}x{}">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="LpXMjndB6j9NRW3yyZqjay" Name="Input 0" Kind="InputPin" DefaultValue="discourse" PinGroupName="Inputs">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="EpXKoHbpn6SLKvdjGDTq8M" Name="Input 1" Kind="InputPin" DefaultValue="forums" PinGroupName="Inputs">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="QdBvBlUF0mRPIjsEzKYRQ6" Name="Mask" Kind="InputPin" />
+            <Pin Id="AT56awTJmaDPzYKKsEv0X3" Name="Output" Kind="OutputPin" />
+          </Node>
+          <Pad Id="T1FueLFatUbNBS0oDM624Y" Comment="" Bounds="272,358,109,15" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="AD8uV3NoIqOM123SamwZLZ" Comment="Template" Bounds="272,296,100,9" ShowValueBox="true" isIOBox="true" Value="{}.vvvv.org/?={}">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="JMOkxlJ9j3mQVxkaZsGNjp" Comment="" Bounds="466,295,52,15" ShowValueBox="true" isIOBox="true" Value="discourse">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="LCPma0qXyO3Om6vhDoWuxU" Comment="" Bounds="660,293,41,15" ShowValueBox="true" isIOBox="true" Value="forums">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+        </Canvas>
+        <Patch Id="CdHecXF7EnpLO9cf7ikAT3" Name="Create" />
+        <Patch Id="TlhcqQicXuCO42aqo6PXLd" Name="Update" />
+        <!--
+
+    ************************  ************************
+
+-->
+        <ProcessDefinition Id="B0fj6OoaGVqL1vwI1d7NfN">
+          <Fragment Id="E7iqeflK4TpLi6EW1g8ugQ" Patch="CdHecXF7EnpLO9cf7ikAT3" Enabled="true" />
+          <Fragment Id="Ou30TXHN3SpNPfKAAfxuq7" Patch="TlhcqQicXuCO42aqo6PXLd" Enabled="true" />
+        </ProcessDefinition>
+        <Link Id="FMJDI1NaJZvLwhWzxQXmkf" Ids="AT56awTJmaDPzYKKsEv0X3,T1FueLFatUbNBS0oDM624Y" />
+        <Link Id="H6EYghWxbuAPlNO9R8VBka" Ids="AD8uV3NoIqOM123SamwZLZ,SIBOsWavgSGLeoRkPtVGp6" />
+        <Link Id="HJDxtcpHoIhLtwjhQcpIFT" Ids="JMOkxlJ9j3mQVxkaZsGNjp,LpXMjndB6j9NRW3yyZqjay" />
+        <Link Id="TniP5NzOCBiPkVibRE9WM2" Ids="LCPma0qXyO3Om6vhDoWuxU,EpXKoHbpn6SLKvdjGDTq8M" />
+      </Patch>
+    </Node>
+  </Patch>
+  <NugetDependency Id="D1Ere1WkkMuNIwN6U5ccqV" Location="VL.CoreLib" Version="2021.3.3" />
+  <DocumentDependency Id="T5OCh4KTruvLzbpc2j8UW7" Location="../VL.Dollar.vl" />
+</Document>
